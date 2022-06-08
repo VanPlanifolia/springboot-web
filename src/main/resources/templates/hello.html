@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--使用了Thymeleaf，他为我们动态的往前台添加数据提供了方便-->
+<h1>HELLO</h1>
+<!-- th:text=" ${msg} " 该标签是用来从后台传来的model取出对应的msg然后显示出来 -->
+<div th:text="${msg}"></div>
+<!-- th:each=" arg:${args} " 该标签是接收到后台传入的数据然后，进行便利吧每次的便利结果放到前面的参数中，需要
+     搭配th:text标签使用-->
+<div th:each="user:${usermsg}" th:text="${user}"></div>
+</body>
+</html>
